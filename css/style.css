@@ -1,0 +1,229 @@
+:root {
+  /* Палитра */
+  --color-white: #ffffff;
+  --color-bright-pink: #d41443;
+  --color-light-pink: #ffb8ca;
+
+  /* Названия переменных */
+  --main-text-background-color: var(--color-white);
+  --main-text-color: var(--color-bright-pink);
+  --background-color: var(--color-light-pink);
+
+  --main-font-family: "DM Sans", sans-serif;
+  --secondary-font-family: "Titan One", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--main-text-background-color);
+  background-color: var(--background-color);
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.04em;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  height: 665px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--main-text-background-color);
+}
+
+.title {
+  font-family: var(--secondary-font-family);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.title-begin {
+  font-size: 30px;
+  line-height: 1.13;
+
+  color: var(--second-text-color);
+}
+
+.title-accent {
+  font-size: 58px;
+  line-height: 1.14;
+  letter-spacing: 0.06em;
+
+  color: var(--main-text-color);
+}
+
+/*=== Навигация ===*/
+.header {
+  display: flex;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 110px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--color-bright-pink);
+}
+
+.site-nav .link {
+  display: block;
+}
+
+.site-nav .link:not(last-child) {
+  margin-right: 35px;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  min-width: 100;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-radius: 22px;
+
+  background-color: var(--not-hover-background);
+
+  color: var(--main-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--main-text-background-color);
+}
+
+/*=== /Навигация ===*/
+
+/*=== О нас ===*/
+.about-us {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us .title-begin {
+  font-size: 38px;
+  line-height: 1.16;
+  color: var(--main-text-background-color);
+}
+
+.about-us .title-accent {
+  font-size: 58px;
+  line-height: 0.9;
+  color: var(--main-text-color);
+}
+
+.about-us .button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  background-color: var(--main-text-background-color);
+  border-radius: 20px;
+}
+
+.about-us .button:hover,
+.about-us .button:focus {
+  color: var(--main-text-background-color);
+  background-color: var(--main-text-color);
+}
+
+.number-of-stores {
+  line-height: 1.29;
+}
+
+.accent-number {
+  font-family: var(--secondary-font-family);
+  font-size: 46px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+}
+
+.description {
+  margin-left: 115px;
+  flex-direction: column;
+}
+
+.title-begin {
+  width: 277px;
+  margin-bottom: 25px;
+  font-size: 30px;
+  line-height: 1.13;
+
+  color: var(--second-text-color);
+}
+
+.buttons {
+  display: flex;
+  margin-bottom: 56px;
+}
+
+.buttons .button:not(last-child) {
+  margin-right: 15px;
+}
+
+.know-more {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  width: 200px;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.statistics-list {
+  margin-bottom: 109px;
+}
+
+.statistics-list .items {
+  text-align: end;
+}
