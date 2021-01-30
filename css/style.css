@@ -2,12 +2,27 @@
   /* Палитра */
   --color-white: #ffffff;
   --color-bright-pink: #d41443;
-  --color-light-pink: #ffb8ca;
+  --color-light-pink: #ffa5ba;
+  --color-second-light-pink: #ffb8ca;
+  --color-light-orange: #f0d1a5;
+  --color-light-green: #c2e297;
+  --color-very-light-pink: #fff5f6;
+  --color-black: #000000;
+  --color-grey-white: #ecebeb;
+  --color-grey-pink: #907e82;
+  --color-second-grey: #e1e1e1;
 
   /* Названия переменных */
   --main-text-background-color: var(--color-white);
   --main-text-color: var(--color-bright-pink);
-  --background-color: var(--color-light-pink);
+  --second-text-color: var(--color-light-pink);
+  --second-text-background-color: var(--color-second-light-pink);
+  --third-text-color: var(--color-black);
+  --third-background-color: var(--color-light-green);
+  --fourth-background-color: var(--color-very-light-pink);
+  --fourth-text-color: var(--color-grey-pink);
+  --not-hover-background: var(--color-grey-white);
+  --border-color: var(--color-second-grey);
 
   --main-font-family: "DM Sans", sans-serif;
   --secondary-font-family: "Titan One", cursive;
@@ -139,6 +154,10 @@ body {
 /*=== /Навигация ===*/
 
 /*=== О нас ===*/
+
+.about-us-section {
+  background-color: var(--color-light-pink);
+}
 .about-us {
   display: flex;
   justify-content: space-between;
@@ -226,4 +245,96 @@ body {
 
 .statistics-list .items {
   text-align: end;
+}
+
+/*=== Виды продукции и состав ===*/
+.products {
+  background-color: var(--main-text-background-color);
+}
+
+.title {
+  font-family: var(--secondary-font-family);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.title-begin {
+  font-size: 30px;
+  line-height: 1.13;
+
+  color: var(--second-text-color);
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  height: 735px;
+}
+
+.product-card {
+  position: relative;
+  width: 335px;
+  height: 525px;
+  padding: 163px 44px 50px;
+  border-radius: 24px;
+  /* margin-bottom: 50px; */
+
+  text-align: center;
+  /* padding: 50px 44px; */
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding: 163px 44px 50px; */
+  height: 100%;
+}
+
+.product-foto {
+  position: absolute;
+  margin-bottom: 38px;
+  left: 0;
+  top: -40%;
+
+  /* top: -50%; */
+}
+
+.bg-card-pink {
+  background-color: #ffb8ca;
+}
+
+.bg-card-orange {
+  background-color: #f0d1a5;
+}
+
+.bg-card-green {
+  background-color: #c2e297;
+}
+
+.product-card:not(last-child) {
+  margin-right: 29px;
+}
+
+.ellipses {
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 32px; */
+}
+
+.product-name {
+  font-size: 30px;
+  line-height: 1.13;
+  color: var(--main-text-background-color);
+  margin-bottom: 32px;
+}
+
+.product-description {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.76;
+  color: var(--main-text-background-color);
+  word-break: break-all;
+  /* margin-bottom: 62px; */
 }
