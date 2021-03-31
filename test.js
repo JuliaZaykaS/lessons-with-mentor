@@ -122,15 +122,46 @@
 
 // console.log(checkFruit('слива'))
 
-function getCommonElements(array1, array2) {
-  // Пиши код ниже этой строки
-  const newArray = [];
-for (let i = 0; i < array2.length; i+=1)
-  if (array1.includes(array2[i])) {
-  newArray.push(array2[i]);
-  }
+// function getCommonElements(array1, array2) {
+//   // Пиши код ниже этой строки
+//   const newArray = [];
+// for (let i = 0; i < array2.length; i+=1)
+//   if (array1.includes(array2[i])) {
+//   newArray.push(array2[i]);
+//   }
 
-  return newArray;
+//   return newArray;
+//   // Пиши код выше этой строки
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]))
+
+const products = [
+  { name: 'Радар', price: 1300, quantity: 4 },
+  { name: 'Сканер', price: 2700, quantity: 3 },
+  { name: 'Дроид', price: 400, quantity: 7 },
+  { name: 'Захват', price: 1200, quantity: 9 },
+];
+
+function getAllPropValues(propName) {
+  // Пиши код ниже этой строки
+  let arrayValues = [];
+  for (let product of products) {
+    for (let key of Object.keys(product)) {
+      if (key === propName){
+      arrayValues.push(product[key]);
+
+      // return arrayValues;
+      // console.log(arrayValues);
+    }
+    }
+
+// return arrayValues;
+
+}
+// return [];
+return arrayValues;
+
   // Пиши код выше этой строки
 }
-console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]))
+
+console.log(getAllPropValues('name'));
