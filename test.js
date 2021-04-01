@@ -251,28 +251,39 @@ const atTheOldToad = {
 
   },
   removePotion(potionName) {
-    const potionIndex = this.potions.indexOf(potionName);
+for (let i = 0; i < this.potions.length; i+=1) {
+  if (this.potions[i].name === potionName) {
 
-    if (potionIndex === -1) {
-      return `Зелья ${potionName} нет в инвентаре!`;
-    }
+    this.potions.splice(i, 1);
+  }
 
-    this.potions.splice(potionIndex, 1);
+}
+return `Зелья ${potionName} нет в инвентаре!`;
+
+
+
   },
-  // updatePotionName(oldName, newName) {
-  //   const potionIndex = this.potions.indexOf(oldName);
 
-  //   if (potionIndex === -1) {
-  //     return `Зелья ${oldName} нет в инвентаре!`;
-  //   }
 
-  //   this.potions.splice(potionIndex, 1, newName);
-  // },
+  updatePotionName(oldName, newName) {
+    for (let i = 0; i < this.potions.length; i+=1) {
+      if (this.potions[i].name === oldName) {
+        this.potions[i].name = newName;
+
+      }
+
+    }
+      return `Зелья ${oldName} нет в инвентаре!`;
+
+
+  },
   // Пиши код выше этой строки
 };
 console.log(atTheOldToad.getPotions());
 console.log(atTheOldToad.addPotion({ name: 'Невидимка', price: 620 }));
-console.log(atTheOldToad.removePotion());
-// console.log(atTheOldToad.updatePotionName());
+console.log(atTheOldToad.removePotion('Дыхание дракона'));
+console.log(atTheOldToad);
+console.log(atTheOldToad.updatePotionName('Каменная кожа', 'Зелье неуязвимости'));
+console.log(atTheOldToad);
 
 
