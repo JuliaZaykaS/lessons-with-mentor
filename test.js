@@ -135,33 +135,144 @@
 // }
 // console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]))
 
-const products = [
-  { name: 'Радар', price: 1300, quantity: 4 },
-  { name: 'Сканер', price: 2700, quantity: 3 },
-  { name: 'Дроид', price: 400, quantity: 7 },
-  { name: 'Захват', price: 1200, quantity: 9 },
-];
+// const products = [
+//   { name: 'Радар', price: 1300, quantity: 4 },
+//   { name: 'Сканер', price: 2700, quantity: 3 },
+//   { name: 'Дроид', price: 400, quantity: 7 },
+//   { name: 'Захват', price: 1200, quantity: 9 },
+// ];
 
-function getAllPropValues(propName) {
-  // Пиши код ниже этой строки
-  let arrayValues = [];
-  for (let product of products) {
-    for (let key of Object.keys(product)) {
-      if (key === propName){
-      arrayValues.push(product[key]);
+// function getAllPropValues(propName) {
+//   // Пиши код ниже этой строки
+//   let arrayValues = [];
+//   for (let product of products) {
+//     for (let key of Object.keys(product)) {
+//       if (key === propName){
+//       arrayValues.push(product[key]);
 
-      // return arrayValues;
-      // console.log(arrayValues);
-    }
-    }
+//       // return arrayValues;
+//       // console.log(arrayValues);
+//     }
+//     }
 
+// // return arrayValues;
+
+// }
+// // return [];
 // return arrayValues;
 
-}
-// return [];
-return arrayValues;
+//   // Пиши код выше этой строки
+// }
 
+// console.log(getAllPropValues('name'));
+
+// const products = [
+//   { name: 'Радар', price: 1300, quantity: 4 },
+//   { name: 'Сканер', price: 2700, quantity: 3 },
+//   { name: 'Дроид', price: 400, quantity: 7 },
+//   { name: 'Захват', price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Пиши код ниже этой строки
+//   let productPrice = 0;
+//   for (let product of products){
+//     if(product.name === productName) {
+//       productPrice = product['price']*product['quantity'];
+//     }
+//   }
+
+//   return productPrice;
+//   // Пиши код выше этой строки
+// }
+// console.log(calculateTotalPrice('Дроид'));
+
+// function calculateMeanTemperature(forecast) {
+
+  //   const {today: {low:todayLow, high:todayHigh}, tomorrow: {low:tomorrowLow, high:tomorrowHigh}} = forecast;
+  //   // Пиши код выше этой строки
+  //   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+  // }
+  // console.log(calculateMeanTemperature({ today: {low: 28, high: 32}, tomorrow: {low: 25, high: 29} }));
+
+
+//   function makeTask(data) {
+//     const completed = false;
+//     const category = 'Общее';
+//     const priority = 'Обычный';
+//     // Пиши код ниже этой строки
+//     const newData = { category, priority, ...data, completed};
+//     console.log(newData);
+//     // Пиши код выше этой строки
+//   }
+
+//   console.log(makeTask({ category: 'Домашнее', priority: 'Низкий', text: 'Вынести мусор' }));
+//   console.log(makeTask({ category: 'Финансы', text: 'Забрать проценты' }));
+//   console.log(makeTask({ priority: 'Низкий', text: 'Выбрать шампунь' }));
+// console.log(makeTask({}));
+
+// Пиши код ниже этой строки
+// function findMatches(firstArg, ...otherArgs) {
+//   const matches = []; // Не изменяй эту строку
+// for (let arg of otherArgs){
+// if(firstArg.includes(arg)) {
+//    matches.push(arg);
+//    }
+// }
+//   // Пиши код выше этой строки
+//   return matches;
+// }
+
+// const atTheOldToad = {
+//   // Пиши код ниже этой строки
+//   const potions = [];
+//   // Пиши код выше этой строки
+// };
+
+const atTheOldToad = {
+  potions: [
+    { name: 'Зелье скорости', price: 460 },
+    { name: 'Дыхание дракона', price: 780 },
+    { name: 'Каменная кожа', price: 520 },
+  ],
+  // Пиши код ниже этой строки
+  getPotions() {
+    return this.potions;
+  },
+
+  addPotion(newPotion) {
+    for (let potion of this.potions) {
+
+      if (potion.name === newPotion.name) {
+        return `Зелье ${newPotion.name} уже есть в инвентаре!`;
+      }
+    }
+    this.potions.push(newPotion);
+
+  },
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+
+    if (potionIndex === -1) {
+      return `Зелья ${potionName} нет в инвентаре!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  // updatePotionName(oldName, newName) {
+  //   const potionIndex = this.potions.indexOf(oldName);
+
+  //   if (potionIndex === -1) {
+  //     return `Зелья ${oldName} нет в инвентаре!`;
+  //   }
+
+  //   this.potions.splice(potionIndex, 1, newName);
+  // },
   // Пиши код выше этой строки
-}
+};
+console.log(atTheOldToad.getPotions());
+console.log(atTheOldToad.addPotion({ name: 'Невидимка', price: 620 }));
+console.log(atTheOldToad.removePotion());
+// console.log(atTheOldToad.updatePotionName());
 
-console.log(getAllPropValues('name'));
+
