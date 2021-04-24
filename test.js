@@ -538,10 +538,24 @@
 
 // console.log(getUserNames(users));
 
-const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// // Пиши код ниже этой строки
+
+// const evenNumbers = numbers.filter(number => number%2===0);
+// const oddNumbers = numbersnumbers.filter(number => !number % 2 === 0);
+
+// console.log(evenNumbers(numbers));
+
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
 // Пиши код ниже этой строки
 
-const evenNumbers = numbers.filter(number => number%2===0);
-const oddNumbers = numbersnumbers.filter(number => !number % 2 === 0);
+const eachElementInFirstIsEven = firstArray.even(element => element % 2 === 0);
+const eachElementInFirstIsOdd = firstArray.even(element => element % 2 !== 0);
 
-console.log(evenNumbers(numbers));
+const eachElementInSecondIsEven = secondArray.even(elem => elem % 2 === 0);
+const eachElementInSecondIsOdd = secondArray.even(elem => elem % 2 !== 0);
+
+const eachElementInThirdIsEven = thirdArray.even(el => el % 2 === 0);
+const eachElementInThirdIsOdd = thirdArray.even(el => el % 2 !== 0);
